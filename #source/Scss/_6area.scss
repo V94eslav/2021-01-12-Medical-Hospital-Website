@@ -1,0 +1,196 @@
+.area {
+  background: #fff;
+
+  .area-inner {
+    padding: 100px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr 420px;
+    grid-template-areas: "title-how . title-our"
+      "sub-title-how sub-title-how sub-title-our"
+      "how-img1 how-img2 open-open"
+      "how-content1 how-content2 opens"
+      "btn-how btn-how .";
+
+    &__title-how {
+      color: #494949;
+      font-family: M-B;
+      font-size: 45px;
+      grid-area: title-how;
+    }
+
+    &__sub-title-how {
+      color: #6a6a6a;
+      font-family: "OS-R";
+      font-size: 16px;
+      line-height: 30px;
+      grid-area: sub-title-how;
+    }
+
+    &__how-img1 {
+      grid-area: how-img1;
+      width: 100%;
+    }
+
+    &__how-img2 {
+      grid-area: how-img2;
+      width: 100%;
+    }
+
+    &__how-content {
+      .how-info {
+        color: #6f6f6e;
+        font-family: M-M;
+        font-size: 20px;
+        letter-spacing: -1.21px;
+        margin-top: 20px;
+      }
+
+      .how-date {
+        color: #0087be;
+        font-family: M-M;
+        font-size: 15px;
+        letter-spacing: -0.38px;
+        margin-top: 12px;
+
+      }
+
+      .how-text {
+        color: #6a6a6a;
+        font-family: "OS-R";
+        font-size: 16px;
+        line-height: 30px;
+        margin-top: 30px;
+      }
+    }
+
+    &__how-content1 {
+      grid-area: how-content1;
+    }
+
+    &__how-content2 {
+      grid-area: how-content2;
+    }
+
+    &__btn-how {
+      grid-area: btn-how;
+      margin: 0 auto;
+
+      div {
+        @extend %btn;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+
+    &__title-our {
+      color: #494949;
+      font-family: M-B;
+      font-size: 45px;
+      grid-area: title-our;
+    }
+
+    &__sub-title-our {
+      color: #6a6a6a;
+      font-family: "OS-R";
+      font-size: 16px;
+      line-height: 30px;
+      grid-area: sub-title-our;
+    }
+
+    &__open-open {
+      grid-area: open-open;
+
+      .open__text {
+        color: #6a6a6a;
+        font-family: "OS-R";
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    &__opens {
+      grid-area: opens;
+
+
+    }
+
+    .open {
+      background-color: #e2e2e2;
+      color: #494949;
+      font-family: M-M;
+      font-size: 20px;
+      padding: 7px 0 7px 7px;
+      border-radius: 40px;
+      margin-bottom: 12px;
+      cursor: pointer;
+
+
+      .open-circle {
+        display: inline-block;
+        padding: 6px 12px 10px 14px;
+        background-color: #fff;
+        border-radius: 50%;
+
+        .open-p {
+          color: #0087be;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .open-active {
+      background-color: #0087be;
+      color: #fff;
+
+      .open-p {
+        color: #0087be;
+      }
+    }
+  }
+
+  @media (max-width: 1230px) {
+    .area-inner {
+      padding: 100px 30px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "title-how title-how"
+        "sub-title-how sub-title-how"
+        "how-img1 how-img2"
+        "how-content1 how-content2"
+        "btn-how btn-how"
+        "title-our title-our"
+        "sub-title-our sub-title-our"
+        "open-open opens";
+
+      &__title-how {
+        text-align: center;
+      }
+
+      &__title-our {
+        text-align: center;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    .area-inner {
+      padding: 50px 15px;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "title-how "
+        "sub-title-how "
+        "how-img1"
+        "how-content1"
+        "how-img2"
+        "how-content2"
+        "btn-how"
+        "title-our"
+        "sub-title-our"
+        "open-open"
+        "opens";
+    }
+  }
+}

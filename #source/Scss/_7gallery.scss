@@ -1,0 +1,95 @@
+.gallery {
+  background: url(../img/background-gallery.png) center bottom/cover no-repeat, #31b49c;
+
+  .gallery-inner {
+    padding: 100px 0;
+    max-width: 1230px;
+    margin: 0 auto;
+
+    &__title {
+      color: #ffffff;
+      font-family: M-B;
+      font-size: 45px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &__sub-title {
+      color: #ffffff;
+      font-family: "OS-R";
+      font-size: 16px;
+      line-height: 30px;
+      padding: 0 15px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    &__gallery {
+      padding: 0 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 35px;
+      grid-template-areas: "g-i__g-item1 g-i__g-item2 g-i__g-item3"
+        "g-i__g-item4 g-i__g-item5 g-i__g-item6";
+
+      .gallery-inner__gallery-item {
+        .gallery-inner__gallery-item-img {
+          width: 100%;
+          transition: .2s linear;
+        }
+
+        .gallery-inner__gallery-item-img:hover {
+          transform: translate3d(-10px, -10px, 0);
+        }
+      }
+
+      .gallery-inner__gallery-item1 {
+        grid-area: g-i__g-item1;
+      }
+
+      .gallery-inner__gallery-ite21 {
+        grid-area: g-i__g-item2;
+      }
+
+      .gallery-inner__gallery-item3 {
+        grid-area: g-i__g-item3;
+      }
+
+      .gallery-inner__gallery-item4 {
+        grid-area: g-i__g-item4;
+      }
+
+      .gallery-inner__gallery-item5 {
+        grid-area: g-i__g-item5;
+      }
+
+      .gallery-inner__gallery-item6 {
+        grid-area: g-i__g-item6;
+      }
+    }
+
+    @media (max-width: 770px) {
+      .gallery-inner__gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 25px;
+        grid-template-areas: "g-i__g-item1 g-i__g-item2"
+          "g-i__g-item3 g-i__g-item4"
+          "g-i__g-item5 g-i__g-item6";
+      }
+    }
+
+    @media (max-width:575px) {
+      .gallery-inner__gallery {
+        grid-template-columns: 1fr;
+        grid-gap: 25px;
+        grid-template-areas: "g-i__g-item1"
+          "g-i__g-item2"
+          "g-i__g-item3 "
+          "g-i__g-item4"
+          "g-i__g-item5 "
+          "g-i__g-item6";
+      }
+    }
+
+  }
+}

@@ -1,0 +1,193 @@
+.choose {
+  background: #fff;
+
+  .choose-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 100px;
+
+    .choose-tittle {
+      color: #494949;
+      font-size: 45px;
+      font-family: M-B;
+      text-align: center;
+    }
+
+    .choose-sub-tittle {
+      color: #6a6a6a;
+      font-family: "OS-R";
+      font-size: 16px;
+      line-height: 30px;
+      max-width: 772px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 31px;
+    }
+
+
+
+    .choose-content-items {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 20px;
+      grid-template-rows: 300px 300px;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "c-c-item1 c-c-item3 c-c-item4"
+        "c-c-item2 c-c-item3 c-c-item5";
+      margin-top: 30px;
+      padding: 0px 30px 0px 30px;
+
+
+
+      .choose-content-item {
+        &__circle {
+          width: 75px;
+          height: 75px;
+          background-color: #1a9bdc;
+          border-radius: 50%;
+          text-align: center;
+          position: absolute;
+
+          .choose-content-item__circle-img1 {
+            margin-top: 15px;
+          }
+
+          .choose-content-item__circle-img2 {
+            margin-top: 17px;
+          }
+
+          .choose-content-item__circle-img4 {
+            margin-top: 7px;
+          }
+
+          .choose-content-item__circle-img5 {
+            margin-top: 10px;
+          }
+
+        }
+
+        &__tittle {
+          color: #6f6f6e;
+          font-family: M-B;
+          font-size: 30px;
+          letter-spacing: -1.82px;
+          margin-top: 20px;
+          position: relative;
+          left: 100px;
+        }
+
+
+        &__text {
+          color: #6a6a6a;
+          font-size: 16px;
+          line-height: 30px;
+          max-width: 360px;
+          margin-top: 40px;
+        }
+      }
+
+      .choose-content-item1 {
+        grid-area: c-c-item1;
+        margin: 0 auto;
+      }
+
+      .choose-content-item2 {
+        grid-area: c-c-item2;
+        margin: 0 auto;
+      }
+
+      .choose-content-item3 {
+        grid-area: c-c-item3;
+        margin: 20px auto 0;
+      }
+
+      .choose-content-item4 {
+        grid-area: c-c-item4;
+        margin: 0 auto;
+      }
+
+      .choose-content-item5 {
+        grid-area: c-c-item5;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 1230px) {
+      .choose-content-items {
+        grid-template-rows: auto 300px 300px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "c-c-item3 c-c-item3"
+          "c-c-item1 c-c-item4"
+          "c-c-item2 c-c-item5";
+      }
+    }
+
+    @media (max-width: 770px) {
+      .choose-content-items {
+        padding: 0 15px;
+
+        .choose-content-item {
+          .choose-content-item__tittle {
+            font-size: 24px;
+            left: 80px;
+          }
+
+          .choose-content-item__text {
+            font-size: 14px;
+          }
+
+          .choose-content-item__circle {
+            width: 60px;
+            height: 60px;
+
+            .choose-content-item__circle-img {
+              width: 36px;
+            }
+
+
+            .choose-content-item__circle-img1 {
+              margin-top: 12px;
+            }
+
+            .choose-content-item__circle-img2 {
+              margin-top: 15px;
+            }
+
+            .choose-content-item__circle-img4 {
+              margin-top: 6px;
+              width: 32px;
+            }
+
+            .choose-content-item__circle-img5 {
+              margin-top: 10px;
+            }
+
+          }
+
+        }
+      }
+    }
+
+    @media (max-width: 575px) {
+      .choose-content-items {
+        grid-template-rows: auto 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "c-c-item3"
+          "c-c-item1"
+          "c-c-item2"
+          "c-c-item4"
+          "c-c-item5";
+
+        .choose-content-item__text {
+          max-width: 280px;
+        }
+
+      }
+    }
+  }
+
+}

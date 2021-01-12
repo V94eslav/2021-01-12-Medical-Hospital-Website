@@ -1,0 +1,48 @@
+.consultation {
+  background-color: #e2e2e2;
+
+  .consultation-inner {
+    max-width: 1115px;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__text {
+      color: #494949;
+      font-family: M-B;
+      font-size: 30px;
+    }
+
+    &__btn {
+      @extend %btn;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .consultation-inner {
+      flex-direction: column;
+
+      &__text {
+        max-width: 95%;
+        text-align: center;
+      }
+
+      &__btn {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 770px) {
+    .consultation-inner {
+
+      &__text {
+        font-size: 24px;
+      }
+
+    }
+  }
+
+}
